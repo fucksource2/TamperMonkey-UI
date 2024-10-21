@@ -55,6 +55,10 @@
                 return GM_getValue(this.storageKey, this.defaultValue);
             }
 
+            set = (state) => {
+                GM_setValue(this.storageKey, state);
+            }
+
             toggle = () => {
                 GM_setValue(this.storageKey, !this.get());
             }
