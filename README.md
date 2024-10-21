@@ -49,32 +49,18 @@ new UI.Checkbox(displayName, storageKey, defaultValue, callback)
 // @name         Script
 // @require      https://raw.githubusercontent.com/fucksource2/TamperMonkey-UI/refs/heads/main/lib.js
 // @run-at       document-end
+// @match        https://gamesense.pub/*
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_registerMenuCommand
 // ==/UserScript==
 
-(function() {
+(() => {
     'use strict';
 
-    const selectable = new UI.Selectable(
-        'Select User Group',
-        'userGroup',
-        { admin: 'Admin', user: 'User' },
-        'user',
-        () => {
-            console.log('User group changed!');
-        }
-    );
-
     // Create a checkbox
-    const checkbox = new UI.Checkbox(
-        'Enable Feature',
-        'enableFeature',
-        false,
-        () => {
-            console.log('Checkbox toggled!');
-        }
-    );
+    const checkbox = new UI.Checkbox("Feature", "feature_storage", false, () => {
+        alert(checkbox.get());
+    });
 })();
 ```
