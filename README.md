@@ -48,6 +48,10 @@ new UI.Checkbox(displayName, storageKey, defaultValue, callback)
 // ==UserScript==
 // @name         Script
 // @require      https://raw.githubusercontent.com/fucksource2/TamperMonkey-UI/refs/heads/main/lib.js
+// @run-at       document-end
+// @grant        GM_setValue
+// @grant        GM_getValue
+// @grant        GM_registerMenuCommand
 // ==/UserScript==
 
 (function() {
