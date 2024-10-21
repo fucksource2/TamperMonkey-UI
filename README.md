@@ -41,6 +41,7 @@ new UI.Checkbox(displayName, storageKey, defaultValue, callback)
 #### Methods
 
 - `get()`: Returns the current state of the checkbox.
+- `set(state)` Sets the current state of the checkbox.
 - `toggle()`: Toggles the checkbox state.
 
 ### Example
