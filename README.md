@@ -42,3 +42,35 @@ new UI.Checkbox(displayName, storageKey, defaultValue, callback)
 
 - `get()`: Returns the current state of the checkbox.
 - `toggle()`: Toggles the checkbox state.
+
+### Example
+```javascript
+// ==UserScript==
+// @name         Script
+// @require      https://raw.githubusercontent.com/fucksource2/TamperMonkey-UI/refs/heads/main/lib.js
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    const selectable = new UI.Selectable(
+        'Select User Group',
+        'userGroup',
+        { admin: 'Admin', user: 'User' },
+        'user',
+        () => {
+            console.log('User group changed!');
+        }
+    );
+
+    // Create a checkbox
+    const checkbox = new UI.Checkbox(
+        'Enable Feature',
+        'enableFeature',
+        false,
+        () => {
+            console.log('Checkbox toggled!');
+        }
+    );
+})();
+```
