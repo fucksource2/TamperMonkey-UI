@@ -60,7 +60,7 @@
             }
 
             toggle = () => {
-                GM_setValue(this.storageKey, !this.get());
+                this.set(!this.get());
             }
         }
     }
